@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uKN-wk-bUM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Call View Controller-->
+        <scene sceneID="RKw-tU-tLK">
+            <objects>
+                <viewController storyboardIdentifier="CallViewController" modalPresentationStyle="overFullScreen" id="uKN-wk-bUM" customClass="CallViewController" customModule="EmijiChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c1x-k5-csc"/>
+                        <viewControllerLayoutGuide type="bottom" id="HTg-Zx-Dx7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jNf-7D-yTg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5L-fg-LYx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Edx-kb-bAV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zuckerberg" translatesAutoresizingMaskIntoConstraints="NO" id="sZK-sS-2oK">
+                                            <rect key="frame" x="87" y="30" width="200" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="3hV-BW-LPE"/>
+                                                <constraint firstAttribute="width" secondItem="sZK-sS-2oK" secondAttribute="height" multiplier="1:1" id="M86-ld-acQ"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="100"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="calling..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vf-JC-Y6C">
+                                            <rect key="frame" x="155.5" y="292" width="63.5" height="29"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="29" id="t0x-A7-rYq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mark Zuckerberg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDd-xY-wUg">
+                                            <rect key="frame" x="65" y="238" width="245.5" height="46"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="46" id="2Js-Fi-Ply"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="35"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-2Q-60K">
+                                            <rect key="frame" x="37" y="329" width="301" height="227"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bg7-On-iQh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="301" height="113"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pl2-KF-Nsv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="113"/>
+                                                            <state key="normal" image="mute"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-K6-UDh">
+                                                            <rect key="frame" x="107" y="0.0" width="87" height="113"/>
+                                                            <state key="normal" image="speaker"/>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7G-CI-VH1">
+                                                            <rect key="frame" x="214" y="0.0" width="87" height="113"/>
+                                                            <state key="normal" image="videoCall"/>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZw-Py-vBQ">
+                                                    <rect key="frame" x="109" y="143" width="83" height="84"/>
+                                                    <state key="normal" image="Reject Call"/>
+                                                    <connections>
+                                                        <action selector="dismissButtonTappped:" destination="uKN-wk-bUM" eventType="touchUpInside" id="SVL-pd-RzC"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="sZK-sS-2oK" firstAttribute="top" secondItem="Edx-kb-bAV" secondAttribute="top" constant="30" id="0r2-V7-sXv"/>
+                                        <constraint firstItem="EDd-xY-wUg" firstAttribute="top" secondItem="sZK-sS-2oK" secondAttribute="bottom" constant="8" id="75i-3D-Bbp"/>
+                                        <constraint firstItem="oWF-2Q-60K" firstAttribute="top" secondItem="4Vf-JC-Y6C" secondAttribute="bottom" constant="8" id="8Qb-Ew-tEY"/>
+                                        <constraint firstItem="4Vf-JC-Y6C" firstAttribute="centerX" secondItem="Edx-kb-bAV" secondAttribute="centerX" id="Bdd-hp-2DX"/>
+                                        <constraint firstItem="4Vf-JC-Y6C" firstAttribute="top" secondItem="EDd-xY-wUg" secondAttribute="bottom" constant="8" id="ZWR-Nm-FJO"/>
+                                        <constraint firstItem="sZK-sS-2oK" firstAttribute="centerX" secondItem="Edx-kb-bAV" secondAttribute="centerX" id="dYG-pG-QGE"/>
+                                        <constraint firstItem="oWF-2Q-60K" firstAttribute="centerX" secondItem="Edx-kb-bAV" secondAttribute="centerX" id="lGC-pc-2Hs"/>
+                                        <constraint firstItem="EDd-xY-wUg" firstAttribute="centerX" secondItem="Edx-kb-bAV" secondAttribute="centerX" id="tPz-nS-SBu"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="l5L-fg-LYx" secondAttribute="trailing" id="1hS-qb-HQJ"/>
+                            <constraint firstItem="HTg-Zx-Dx7" firstAttribute="top" secondItem="l5L-fg-LYx" secondAttribute="bottom" id="SPd-Y3-qmE"/>
+                            <constraint firstItem="l5L-fg-LYx" firstAttribute="leading" secondItem="jNf-7D-yTg" secondAttribute="leading" id="WbR-z4-FtM"/>
+                            <constraint firstItem="l5L-fg-LYx" firstAttribute="top" secondItem="jNf-7D-yTg" secondAttribute="top" id="pJ6-xI-fqk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGn-BG-KFw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="509.60000000000002" y="-80.50974512743629"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Reject Call" width="83" height="84"/>
+        <image name="mute" width="87" height="110"/>
+        <image name="speaker" width="87" height="113"/>
+        <image name="videoCall" width="87" height="110"/>
+        <image name="zuckerberg" width="215" height="215"/>
+    </resources>
+</document>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vyq-in-it6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Call View Controller-->
+        <scene sceneID="l2C-bi-PUh">
+            <objects>
+                <viewController storyboardIdentifier="VideoCallViewController" id="Vyq-in-it6" customClass="VideoCallViewController" customModule="EmijiChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZfE-ca-brb"/>
+                        <viewControllerLayoutGuide type="bottom" id="tp1-1W-AUK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TCc-m4-7UG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCx-MF-dPE" userLabel="remoteVideoView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLl-jn-Ohu">
+                                        <rect key="frame" x="146" y="575" width="83" height="84"/>
+                                        <state key="normal" image="Reject Call"/>
+                                        <connections>
+                                            <action selector="endVideoCallButtonTapped:" destination="Vyq-in-it6" eventType="touchUpInside" id="kYW-Iv-3aK"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4R-gb-nzF" userLabel="localVideoView">
+                                        <rect key="frame" x="204" y="20" width="171" height="128"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="T9H-kb-5ad"/>
+                                            <constraint firstAttribute="width" secondItem="v4R-gb-nzF" secondAttribute="height" multiplier="171:128" id="YaW-ch-lMK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v4R-gb-nzF" secondAttribute="trailing" id="31W-EL-9HC"/>
+                                    <constraint firstItem="bLl-jn-Ohu" firstAttribute="centerX" secondItem="YCx-MF-dPE" secondAttribute="centerX" id="J4r-jq-tKa"/>
+                                    <constraint firstItem="v4R-gb-nzF" firstAttribute="top" secondItem="YCx-MF-dPE" secondAttribute="top" constant="20" id="h9m-B5-ikV"/>
+                                    <constraint firstAttribute="bottom" secondItem="bLl-jn-Ohu" secondAttribute="bottom" constant="8" id="yq0-oK-B8w"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tp1-1W-AUK" firstAttribute="top" secondItem="YCx-MF-dPE" secondAttribute="bottom" id="9GN-F2-EHL"/>
+                            <constraint firstAttribute="trailing" secondItem="YCx-MF-dPE" secondAttribute="trailing" id="GC6-QF-Qd5"/>
+                            <constraint firstItem="YCx-MF-dPE" firstAttribute="top" secondItem="TCc-m4-7UG" secondAttribute="top" id="VbB-gL-g1z"/>
+                            <constraint firstItem="YCx-MF-dPE" firstAttribute="leading" secondItem="TCc-m4-7UG" secondAttribute="leading" id="en5-TK-WeC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="localVideoView" destination="v4R-gb-nzF" id="IrA-bk-hM4"/>
+                        <outlet property="remoteVideoView" destination="YCx-MF-dPE" id="aWE-PJ-ugI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Na1-si-KsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341.60000000000002" y="-158.77061469265368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Reject Call" width="83" height="84"/>
+    </resources>
+</document>

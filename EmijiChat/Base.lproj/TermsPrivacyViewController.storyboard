@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Terms Privacy View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="TermsPrivacyViewController" id="BYZ-38-t0r" customClass="TermsPrivacyViewController" customModule="EmijiChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_firstmain_back" translatesAutoresizingMaskIntoConstraints="NO" id="3ae-HH-yRE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By Tapping &quot;Continue&quot; you agree to our" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4K-M0-sqv">
+                                <rect key="frame" x="16" y="494" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="BKZ-aP-jvs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XM9-kL-84A">
+                                <rect key="frame" x="67" y="515" width="242" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="InT-SR-0Om">
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="Terms of Service"/>
+                                        <connections>
+                                            <action selector="showTermsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klu-dp-jbM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vii-cx-ZnN">
+                                        <rect key="frame" x="116" y="0.0" width="30" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="and">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFr-sL-iCb">
+                                        <rect key="frame" x="151" y="0.0" width="91" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
+                                        <state key="normal" title="Privacy Policy"/>
+                                        <connections>
+                                            <action selector="showPrivacyPolicyButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2F-HF-uWe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="Fkz-cL-Jxj"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="std-8I-RjA">
+                                <rect key="frame" x="16" y="567" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cFw-oD-g55"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Continue" backgroundImage="login_continueBtn">
+                                    <color key="titleColor" red="0.36959701776504517" green="0.77510303258895874" blue="0.31555092334747314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="continueButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yaL-d1-FTF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="std-8I-RjA" firstAttribute="top" secondItem="P4K-M0-sqv" secondAttribute="bottom" constant="52" id="2Zt-jD-qt5"/>
+                            <constraint firstAttribute="trailing" secondItem="std-8I-RjA" secondAttribute="trailing" constant="16" id="9aL-Wa-7RM"/>
+                            <constraint firstItem="3ae-HH-yRE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HCQ-5c-zUZ"/>
+                            <constraint firstItem="3ae-HH-yRE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pgp-qR-Qkq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3ae-HH-yRE" secondAttribute="bottom" id="S8p-9G-VJh"/>
+                            <constraint firstAttribute="trailing" secondItem="P4K-M0-sqv" secondAttribute="trailing" constant="16" id="a6c-cd-7w6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="std-8I-RjA" secondAttribute="bottom" constant="50" id="bco-1W-9Vb"/>
+                            <constraint firstItem="XM9-kL-84A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eUC-kS-uF0"/>
+                            <constraint firstAttribute="trailing" secondItem="3ae-HH-yRE" secondAttribute="trailing" id="iWy-rN-2f9"/>
+                            <constraint firstItem="std-8I-RjA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="jvj-lA-zX2"/>
+                            <constraint firstItem="std-8I-RjA" firstAttribute="top" secondItem="XM9-kL-84A" secondAttribute="bottom" constant="19.5" id="ocV-SO-Vk9"/>
+                            <constraint firstItem="P4K-M0-sqv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="xkK-U7-wus"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wp9-lc-V25"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="login_continueBtn" width="262" height="45"/>
+        <image name="login_firstmain_back" width="375" height="667"/>
+    </resources>
+</document>

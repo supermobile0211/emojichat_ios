@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dLF-X5-EgN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth Type View Controller-->
+        <scene sceneID="0D7-CE-NfV">
+            <objects>
+                <viewController id="dLF-X5-EgN" customClass="AuthTypeViewController" customModule="EmijiChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8mu-Ij-Vd0"/>
+                        <viewControllerLayoutGuide type="bottom" id="7in-zy-woK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dZ2-WM-nYp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FirstSign_back" translatesAutoresizingMaskIntoConstraints="NO" id="1th-Ge-F3A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gB3-QE-6Wf">
+                                <rect key="frame" x="0.0" y="617" width="187" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8oD-2x-WNP"/>
+                                </constraints>
+                                <state key="normal" title="SignIn">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInButtonTapped:" destination="dLF-X5-EgN" eventType="touchUpInside" id="oqq-bS-5Z4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJu-2N-ura">
+                                <rect key="frame" x="188" y="617" width="187" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tAp-0L-lGg"/>
+                                </constraints>
+                                <state key="normal" title="SignUp">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="dLF-X5-EgN" eventType="touchUpInside" id="dq5-H3-W8y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aJu-2N-ura" firstAttribute="leading" secondItem="gB3-QE-6Wf" secondAttribute="trailing" constant="1" id="7a8-uf-ueN"/>
+                            <constraint firstItem="1th-Ge-F3A" firstAttribute="top" secondItem="dZ2-WM-nYp" secondAttribute="top" id="7vA-WO-09Z"/>
+                            <constraint firstItem="7in-zy-woK" firstAttribute="top" secondItem="aJu-2N-ura" secondAttribute="bottom" id="Jr9-qQ-oJR"/>
+                            <constraint firstAttribute="trailing" secondItem="1th-Ge-F3A" secondAttribute="trailing" id="Xzm-OL-Um9"/>
+                            <constraint firstItem="7in-zy-woK" firstAttribute="top" secondItem="1th-Ge-F3A" secondAttribute="bottom" id="bJD-e8-4c2"/>
+                            <constraint firstItem="7in-zy-woK" firstAttribute="top" secondItem="gB3-QE-6Wf" secondAttribute="bottom" id="cc2-tZ-ssn"/>
+                            <constraint firstItem="1th-Ge-F3A" firstAttribute="leading" secondItem="dZ2-WM-nYp" secondAttribute="leading" id="gCi-ZI-eAl"/>
+                            <constraint firstAttribute="trailing" secondItem="aJu-2N-ura" secondAttribute="trailing" id="hpD-Ek-2SK"/>
+                            <constraint firstItem="aJu-2N-ura" firstAttribute="width" secondItem="gB3-QE-6Wf" secondAttribute="width" id="jiD-Dk-ChC"/>
+                            <constraint firstItem="gB3-QE-6Wf" firstAttribute="leading" secondItem="dZ2-WM-nYp" secondAttribute="leading" id="kQh-ZR-uZI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vK-Pg-M1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.80000000000001" y="-218.1409295352324"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FirstSign_back" width="375" height="667"/>
+    </resources>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Vzd-Nr-nxL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit chats-->
+        <scene sceneID="jXd-rh-2qg">
+            <objects>
+                <viewController storyboardIdentifier="EditChatsViewController" id="Vzd-Nr-nxL" customClass="EditChatsViewController" customModule="EmijiChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AZD-FR-nJ7"/>
+                        <viewControllerLayoutGuide type="bottom" id="tI9-TO-9rz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vju-DU-bhz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ti-Y4-Ejy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="527"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vzd-Nr-nxL" id="0xV-2Z-JNW"/>
+                                    <outlet property="delegate" destination="Vzd-Nr-nxL" id="pTe-R0-CqR"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwT-nY-YxO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ucY-Ff-iEA"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" red="0.38592457769999999" green="0.8388272524" blue="0.32397884129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Edit chats" id="sG1-r7-40u">
+                                        <barButtonItem key="rightBarButtonItem" image="close" id="Q5V-Na-Bex">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="closeButtonTapped:" destination="Vzd-Nr-nxL" id="IzA-Vd-aZG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFI-wg-eQP">
+                                <rect key="frame" x="16" y="599" width="343" height="60"/>
+                                <color key="backgroundColor" red="0.9279766679" green="0.27111253140000002" blue="0.2138498127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="hvg-VX-0sb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="deleteButtonTapped:" destination="Vzd-Nr-nxL" eventType="touchUpInside" id="X0x-HM-8aB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4ti-Y4-Ejy" secondAttribute="trailing" id="CcZ-Ur-Dm3"/>
+                            <constraint firstAttribute="trailing" secondItem="qwT-nY-YxO" secondAttribute="trailing" id="EsI-BT-vIl"/>
+                            <constraint firstAttribute="trailing" secondItem="nFI-wg-eQP" secondAttribute="trailing" constant="16" id="SMV-wy-njZ"/>
+                            <constraint firstItem="nFI-wg-eQP" firstAttribute="top" secondItem="4ti-Y4-Ejy" secondAttribute="bottom" constant="8" id="TNk-s1-GN3"/>
+                            <constraint firstItem="qwT-nY-YxO" firstAttribute="leading" secondItem="Vju-DU-bhz" secondAttribute="leading" id="VdM-oB-aOP"/>
+                            <constraint firstItem="tI9-TO-9rz" firstAttribute="top" secondItem="nFI-wg-eQP" secondAttribute="bottom" constant="8" id="bZR-mf-aqg"/>
+                            <constraint firstItem="4ti-Y4-Ejy" firstAttribute="leading" secondItem="Vju-DU-bhz" secondAttribute="leading" id="nCW-9x-Oto"/>
+                            <constraint firstItem="qwT-nY-YxO" firstAttribute="top" secondItem="AZD-FR-nJ7" secondAttribute="bottom" id="o6S-rO-HWm"/>
+                            <constraint firstItem="nFI-wg-eQP" firstAttribute="leading" secondItem="Vju-DU-bhz" secondAttribute="leading" constant="16" id="q8H-7c-1Gb"/>
+                            <constraint firstItem="4ti-Y4-Ejy" firstAttribute="top" secondItem="qwT-nY-YxO" secondAttribute="bottom" id="sAz-Aj-W4W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit chats" id="uOA-DU-J57">
+                        <barButtonItem key="rightBarButtonItem" image="close" id="hD9-bG-BaG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="chatsTableView" destination="4ti-Y4-Ejy" id="e1e-pb-Ow3"/>
+                        <outlet property="deleteButton" destination="nFI-wg-eQP" id="nP5-O0-KCT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xe-Xa-Rr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767.20000000000005" y="223.53823088455775"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="16" height="16"/>
+    </resources>
+</document>
